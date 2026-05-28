@@ -1,0 +1,78 @@
+.hero-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
+  background-color: #1a1a2e; 
+  color: #ffffff; 
+  text-align: center;
+  padding: 0 20px;
+}
+
+
+/* تنسيق الاسم */
+.hero-title {
+  font-size: 3.5rem; /* خط كبير جداً وبارز */
+  margin-bottom: 10px;
+  color: #0f3460; /* لون أزرق عصري للاسم */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* إضافة ظل خفيف للنص */
+}
+
+/* تنسيق المسمى الوظيفي */
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #e94560; /* لون أحمر/وردي مميز للفت الانتباه */
+}
+
+/* تنسيق النبذة المختصرة */
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 600px; /* تحديد عرض أقصى لكي لا يمتد النص كثيراً في الشاشات الكبيرة */
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #a2a2bd;
+}
+
+/* تنسيق حاوية الأزرار */
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* مسافة 20 بيكسل بين الزرين */
+}
+
+/* التنسيق المشترك للأزرار */
+button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px; /* حواف دائرية */
+  cursor: pointer;
+  transition: all 0.3s ease; /* حركة ناعمة عند مرور الماوس */
+  font-weight: bold;
+}
+
+/* زر عرض المشاريع (الأساسي) */
+.primary-btn {
+  background-color: #e94560;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #d13d56; /* لون أغمق قليلاً عند مرور الماوس */
+  transform: translateY(-3px); /* تحريك الزر للأعلى قليلاً */
+}
+
+/* زر التواصل (الثانوي) */
+.secondary-btn {
+  background-color: transparent;
+  color: #e94560;
+  border: 2px solid #e94560;
+}
+
+.secondary-btn:hover {
+  background-color: #e94560;
+  color: white;
+  transform: translateY(-3px);
+}

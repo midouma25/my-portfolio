@@ -1,0 +1,47 @@
+/* الحاوية الرئيسية لشريط التنقل */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* توزيع المسافة بين اللوجو والروابط */
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #16213e; /* لون داكن يتناسق مع الـ Hero */
+  position: sticky; /* هذه الخاصية تجعل الشريط يلتصق بالأعلى */
+  top: 0;
+  z-index: 100; /* لضمان بقاء الشريط فوق كل العناصر الأخرى */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق الشعار */
+.navbar-logo h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* لون مميز لنقطة الذكاء الاصطناعي في الشعار */
+.highlight {
+  color: #e94560;
+}
+
+/* تنسيق قائمة الروابط */
+.navbar-links {
+  list-style: none; /* إزالة النقاط السوداء من القائمة */
+  display: flex;
+  gap: 30px; /* المسافة بين كل رابط وآخر */
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق الروابط نفسها */
+.navbar-links a {
+  color: white;
+  text-decoration: none; /* إزالة الخط السفلي */
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* تأثير مرور الماوس على الرابط */
+.navbar-links a:hover {
+  color: #e94560;
+}

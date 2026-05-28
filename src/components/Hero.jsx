@@ -1,6 +1,6 @@
 // استدعاء مكتبة رياكت الأساسية لبناء المكون
 import React from 'react';
-
+import './Hero.css';
 // مكون القسم الرئيسي للموقع
 function Hero() {
   return (
@@ -8,7 +8,7 @@ function Hero() {
     <div className="hero-container">
       
       {/* الاسم الكامل */}
-      <h1 className="hero-title">Garbi Mohamed Cherif</h1>
+      <h1 className="hero-title">Gherbi Mohamed Cherif</h1>
       
       {/* المسمى الوظيفي الذي يدمج بين تخصصاتك */}
       <h2 className="hero-subtitle">Software Engineer & AI Developer</h2>
