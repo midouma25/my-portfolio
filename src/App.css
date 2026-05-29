@@ -1,3 +1,27 @@
+/* استيراد خط Poppins الاحترافي من جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* تنسيق كامل الموقع */
+body {
+
+  
+  
+* {
+  cursor: none !important; /* إخفاء مؤشر الماوس الافتراضي في كل الموقع */
+}
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* تطبيق الخط الجديد */
+  background-color: #0f172a; /* لون داكن وأنيق جداً */
+  
+  /* إضافة تأثير "الشبكة" (Grid) لتبدو كبيئة تطوير AI */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px; /* حجم مربعات الشبكة */
+  
+  color: #f8fafc;
+}
+
 .app-container {
   text-align: center;
   padding: 50px;
@@ -5,4 +29,22 @@
   background-color: #282c34;
   color: white;
   min-height: 100vh;
+}
+/* --- تأثيرات الحركة الاحترافية --- */
+
+/* تعريف حركة الظهور والصعود */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تطبيق الحركة على جميع الأقسام */
+section {
+  animation: fadeInUp 1s ease-out forwards;
 }

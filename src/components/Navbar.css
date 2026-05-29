@@ -1,16 +1,20 @@
 /* الحاوية الرئيسية لشريط التنقل */
 .navbar {
   display: flex;
-  justify-content: space-between; /* توزيع المسافة بين اللوجو والروابط */
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
-  background-color: #16213e; /* لون داكن يتناسق مع الـ Hero */
-  position: sticky; /* هذه الخاصية تجعل الشريط يلتصق بالأعلى */
+  padding: 20px 50px;
+  
+  /* تأثير الزجاج (Glassmorphism) */
+  background: rgba(15, 23, 42, 0.7); /* لون شفاف */
+  backdrop-filter: blur(12px); /* تشويش ما خلف الشريط */
+  -webkit-backdrop-filter: blur(12px); /* لدعم متصفح سفاري */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* خط سفلي دقيق جداً */
+  
+  position: sticky;
   top: 0;
-  z-index: 100; /* لضمان بقاء الشريط فوق كل العناصر الأخرى */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
-
 /* تنسيق الشعار */
 .navbar-logo h2 {
   margin: 0;

@@ -1,34 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 
 function Projects() {
-  // مصفوفة مشاريعك الحقيقية والاحترافية
+  // 1. إضافة خاصية "category" لكل مشروع
   const myProjects = [
     {
       id: 1,
       title: "E-Commerce Full-Stack Platform",
-      description: "My university graduation project. A complete e-commerce application featuring secure user authentication, dynamic product management, and a seamless checkout experience.",
-      tech: "MERN Stack (MongoDB, Express, React, Node.js)"
+      description: "A complete e-commerce application featuring secure user authentication and dynamic product management.",
+      tech: "MERN Stack",
+      category: "Web Dev"
     },
     {
       id: 2,
       title: "Algorithmic Forex Trading Bot",
-      description: "A high-performance algorithmic trading system featuring a robust back-testing engine to evaluate and execute fast, accurate trading strategies.",
-      tech: "Python, Trading Algorithms, API Integration"
+      description: "A high-performance algorithmic trading system featuring a robust back-testing engine.",
+      tech: "Python",
+      category: "AI & Data"
     },
     {
       id: 3,
       title: "Multimodal AI Quality Evaluator",
-      description: "A framework for analyzing and evaluating AI-generated audio and video, focusing on lip-sync accuracy, emotional resonance, and contextual matching.",
-      tech: "AI Data Analysis, QA, Critical Listening"
+      description: "A framework for analyzing and evaluating AI-generated audio and video.",
+      tech: "Audio QA",
+      category: "Media"
     }
   ];
+
+  // 2. حالة الفلتر الحالي (الافتراضي هو 'All')
+  const [filter, setFilter] = useState('All');
+
+  // 3. فلترة المصفوفة بناءً على الزر المضغوط
+  const filteredProjects = filter === 'All' 
+    ? myProjects 
+    : myProjects.filter(project => project.category === filter);
 
   return (
     <section id="projects" className="projects-container">
       <h2 className="section-title">Featured Projects</h2>
+      
+      {/* 4. أزرار الفلترة */}
+      <div className="filter-buttons">
+        <button className={filter === 'All' ? 'active-filter' : ''} onClick={() => setFilter('All')}>All</button>
+        <button className={filter === 'Web Dev' ? 'active-filter' : ''} onClick={() => setFilter('Web Dev')}>Web Dev</button>
+        <button className={filter === 'AI & Data' ? 'active-filter' : ''} onClick={() => setFilter('AI & Data')}>AI & Data</button>
+        <button className={filter === 'Media' ? 'active-filter' : ''} onClick={() => setFilter('Media')}>Media</button>
+      </div>
+
       <div className="projects-grid">
-        {myProjects.map((project) => (
+        {filteredProjects.map((project) => (
           <div key={project.id} className="project-card">
             <h3 className="project-title">{project.title}</h3>
             <p className="project-desc">{project.description}</p>

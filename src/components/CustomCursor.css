@@ -1,0 +1,33 @@
+.cursor-dot, .cursor-outline {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4facfe;
+  /* أزلنا الـ transition من هنا ليكون سريعاً جداً */
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(79, 172, 254, 0.5);
+  /* جعلنا التغيير فقط للحجم واللون عند الوقوف على زر */
+  transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.cursor-dot.hovering {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.cursor-outline.hovering {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(79, 172, 254, 0.1);
+  border-color: #4facfe;
+}

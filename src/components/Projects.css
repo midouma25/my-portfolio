@@ -24,19 +24,18 @@
 
 /* تصميم بطاقة المشروع (Card) */
 .project-card {
-  background-color: #16213e;
+  background: rgba(30, 41, 59, 0.6); /* خلفية شبه شفافة */
+  backdrop-filter: blur(10px);
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left; /* جعل النص يبدأ من اليسار */
-  border-top: 4px solid #e94560; /* خط تجميلي أعلى البطاقة */
+  border-radius: 16px; /* حواف أكثر دائرية */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* إطار زجاجي */
+  transition: all 0.4s ease;
 }
 
-/* تأثير عند مرور الماوس على البطاقة */
 .project-card:hover {
-  transform: translateY(-10px); /* ترتفع البطاقة للأعلى قليلاً */
-  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.3); /* يتغير لون الظل */
+  transform: translateY(-10px);
+  border-color: rgba(79, 172, 254, 0.5); /* يضيء الإطار باللون الأزرق */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* نصوص البطاقة */
@@ -64,4 +63,31 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: bold;
+}
+
+/* أزرار فلترة المشاريع */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background-color: transparent;
+  color: #a2a2bd;
+  border: 2px solid #374151;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover, 
+.filter-buttons button.active-filter {
+  background-color: #e94560;
+  color: white;
+  border-color: #e94560;
 }

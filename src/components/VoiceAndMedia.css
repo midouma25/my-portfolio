@@ -54,3 +54,93 @@
 .media-action {
   margin-top: 50px;
 }
+
+/* تنسيق قسم الصوتيات */
+/* تنسيق قسم الفيديوهات */
+.video-showcase {
+  margin-top: 60px;
+  background-color: #1f2937;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #374151;
+}
+
+.showcase-title {
+  color: #e94560;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.comparison-section {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.anime-title {
+  color: #4a90e2;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.case-study-text {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.video-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* يتجاوب مع الهواتف بوضعها فوق بعض */
+}
+
+.video-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #111827;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+}
+
+.video-card label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* جعل مشغلات الفيديو متجاوبة وجميلة */
+video {
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  background-color: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* تنسيق قسم الفلسفة */
+.philosophy-section {
+  margin-top: 60px;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.philosophy-title {
+  color: #4facfe;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.philosophy-text {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
