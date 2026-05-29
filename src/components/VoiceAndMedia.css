@@ -31,7 +31,7 @@
 
 .media-card:hover {
   transform: scale(1.05); /* تكبير البطاقة بالكامل عند مرور الماوس */
-  border-color: #e94560;
+  border-color: #ffffff;
 }
 
 .media-icon {

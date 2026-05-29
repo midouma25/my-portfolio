@@ -56,11 +56,11 @@
 }
 
 .project-tech {
-  background-color: rgba(233, 69, 96, 0.1);
-  color: #e94560;
+  color: var(--accent); /* النص ذهبي */
+  background: rgba(251, 191, 36, 0.1); /* خلفية ذهبية شفافة جداً */
   padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
 }
 
