@@ -41,7 +41,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border-color: #e94560;
+  border-color: var(--accent); /* حدود ذهبية عند الكتابة */
 }
 
 .full-width {
@@ -50,8 +50,8 @@ input:focus, textarea:focus {
 }
 
 .submit-btn {
-  background-color: #e94560;
-  color: white;
+background: var(--accent-gradient);
+  color: #0a0c10;
   padding: 15px;
   font-size: 1.2rem;
   border: none;
@@ -62,9 +62,9 @@ input:focus, textarea:focus {
 }
 
 .submit-btn:hover {
-  background-color: #d13d56;
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4);
+  transform: translateY(-2px);
 }
-
 .success-message {
   background-color: rgba(16, 185, 129, 0.1);
   border: 1px solid #10b981;

@@ -86,9 +86,9 @@
 
 .filter-buttons button:hover, 
 .filter-buttons button.active-filter {
-  background-color: #e94560;
-  color: white;
-  border-color: #e94560;
+  background: var(--accent-gradient);
+  color: #0a0c10;
+  border-color: transparent;
 }
 
 @media (max-width: 400px) {

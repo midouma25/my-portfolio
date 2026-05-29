@@ -9,20 +9,20 @@
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: #4facfe;
-  /* أزلنا الـ transition من هنا ليكون سريعاً جداً */
+  background-color: var(--accent); /* تغيير للذهبي */  /* أزلنا الـ transition من هنا ليكون سريعاً جداً */
 }
 
 .cursor-outline {
   width: 40px;
   height: 40px;
-  border: 2px solid rgba(79, 172, 254, 0.5);
-  /* جعلنا التغيير فقط للحجم واللون عند الوقوف على زر */
+  border: 2px solid var(--accent);  /* جعلنا التغيير فقط للحجم واللون عند الوقوف على زر */
   transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out;
 }
 
 .cursor-dot.hovering {
   transform: translate(-50%, -50%) scale(0);
+  background-color: rgba(251, 191, 36, 0.1); /* ذهبي شفاف */
+  border-color: var(--accent);
 }
 
 .cursor-outline.hovering {
