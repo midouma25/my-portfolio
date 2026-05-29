@@ -3,11 +3,13 @@
   overflow: hidden;
   background-color: #0f172a; /* نفس لون الخلفية */
   padding: 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(157, 147, 147, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   display: flex;
   white-space: nowrap;
+    color: white;
+
 }
 
 /* تظليل على الحواف لتبدو التقنيات وكأنها تخرج من العدم */
@@ -34,6 +36,7 @@
 .marquee-content {
   display: inline-flex;
   animation: scrollMarquee 25s linear infinite;
+  color: white;
 }
 
 /* توقف الشريط عند مرور الماوس عليه (اختياري لكنه احترافي) */
@@ -45,11 +48,13 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3); /* جعل النص مفرغاً من الداخل */
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); /* جعل النص مفرغاً من الداخل */
   margin: 0 40px;
   text-transform: uppercase;
   transition: all 0.3s ease;
   cursor: default;
+    color: white;
+
 }
 
 /* عند مرور الماوس، يمتلئ النص بلونك المميز */
