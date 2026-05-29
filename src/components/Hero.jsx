@@ -54,7 +54,7 @@ function Hero() {
       <div className="hero-visual">
         <div className="image-wrapper">
           {/* سنضع مسار صورتك الحقيقية هنا لاحقاً */}
-          <img src="..\public\74390e84-ee87-4bc6-b917-e34eacce65f3.jpg" alt="Mohamed Cherif" className="profile-img" />
+          <img src="/74390e84-ee87-4bc6-b917-e34eacce65f3.jpg" alt="Mohamed Cherif" className="profile-img" />
           
           {/* دائرة تنبض خلف الصورة لتعطي إيحاء الذكاء الاصطناعي */}
           <div className="pulse-ring"></div>
