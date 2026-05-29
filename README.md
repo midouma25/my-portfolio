@@ -29,6 +29,7 @@ To run this project on your local machine, follow these steps:
    git clone [https://github.com/midouma25/gherbi-ai.git](https://github.com/midouma25/gherbi-ai.git)
 
 2. Navigate to the directory:
+
 cd gherbi-ai
 
 3. Install dependencies:
@@ -40,8 +41,13 @@ npm install
 npm run dev
 
 👤 Author
+
 Gherbi Mohamed Cherif Software Engineer | Multimodal AI Developer | Audio QA Expert
 
-🌐 LinkedIn (https://www.linkedin.com/in/mohamed-cherif-gherbi-8930513bb/)
+🌐 LinkedIn 
+
+(https://www.linkedin.com/in/mohamed-cherif-gherbi-8930513bb/)
 
 📧 midouma25@gmail.com
+
+كغ
