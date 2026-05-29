@@ -31,3 +31,10 @@
   background-color: rgba(79, 172, 254, 0.1);
   border-color: #4facfe;
 }
+
+/* إخفاء النقطة والهالة في الهواتف */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot, .cursor-outline {
+    display: none !important;
+  }
+}

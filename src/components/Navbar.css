@@ -1,51 +1,205 @@
-/* الحاوية الرئيسية لشريط التنقل */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  
-  /* تأثير الزجاج (Glassmorphism) */
-  background: rgba(15, 23, 42, 0.7); /* لون شفاف */
-  backdrop-filter: blur(12px); /* تشويش ما خلف الشريط */
-  -webkit-backdrop-filter: blur(12px); /* لدعم متصفح سفاري */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* خط سفلي دقيق جداً */
-  
-  position: sticky;
-  top: 0;
+  padding: 15px 5%;
+  background: rgba(10, 12, 16, 0.8); /* يتناسب مع الخلفية السوداء الجديدة */  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);  top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
-/* تنسيق الشعار */
-.navbar-logo h2 {
-  margin: 0;
-  color: white;
+
+.nav-logo a {
   font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
-/* لون مميز لنقطة الذكاء الاصطناعي في الشعار */
-.highlight {
-  color: #e94560;
+.highlight-dot {
+  color: var(--accent);
 }
 
-/* تنسيق قائمة الروابط */
-.navbar-links {
-  list-style: none; /* إزالة النقاط السوداء من القائمة */
+.nav-links {
+  list-style: none;
   display: flex;
-  gap: 40px; /* المسافة بين كل رابط وآخر */
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-/* تنسيق الروابط نفسها */
-.navbar-links a {
-  color: white;
-  text-decoration: none; /* إزالة الخط السفلي */
-  font-size: 1.1rem;
+.nav-item {
+  color: #e2e8f0;
+  text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s ease;
+  position: relative;
 }
 
-/* تأثير مرور الماوس على الرابط */
-.navbar-links a:hover {
-  color: #e94560;
+.nav-item:hover {
+  color: #4facfe;
+}
+
+/* تأثير خط سفلي يظهر عند مرور الماوس */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #4facfe;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-contact-btn {
+  background: transparent;
+color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-color: var(--accent);
+
+}
+
+.nav-contact-btn:hover {
+background: var(--accent);
+  color: #0a0c10;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4);
+}
+
+/* إعدادات زر الهامبرغر (مخفي في الكمبيوتر) */
+/* إعدادات زر الهامبرغر الصارمة لمنع التشوه */
+.hamburger {
+  display: none; /* مخفي في الكمبيوتر */
+  width: 30px;
+  height: 22px; /* ارتفاع ثابت للزر */
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger div {
+  width: 100%;
+  height: 3px; /* سمك الخط */
+  background-color: #f8fafc;
+  position: absolute;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+
+.hamburger .line1 { top: 0; }
+.hamburger .line2 { top: 50%; transform: translateY(-50%); }
+.hamburger .line3 { bottom: 0; }
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #f8fafc;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  display: block;
+  flex-shrink: 0; /* هذا السطر يمنع المتصفح من ضغط أو تشويه الخطوط */
+}
+
+/* إخفاء عناصر الهاتف في الكمبيوتر */
+.mobile-only {
+  display: none;
+}
+
+/* ========================================= */
+/* 📱 التجاوب مع شاشات الهواتف والتابلت */
+/* ========================================= */
+@media (max-width: 850px) {
+  
+  .hamburger {
+    display: block; /* يظهر في الهواتف */
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin-top: 30px; /* مسافة أعلى الزر في الهاتف */
+  }
+
+ /* تصميم القائمة الجانبية في الهاتف (تأكد من تعديل هذا الجزء) */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -1000%; /* مخفية افتراضياً خارج الشاشة */
+    width: 280px;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    /* أجبرنا المتصفح على استخدام Flexbox عمودي داخل الهاتف */
+    display: flex !important; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* تحت زر الهامبرغر مباشرة فوق باقي الموقع */
+  }
+
+  /* عندما تصبح القائمة نشطة (عند الضغط على الزر) */
+  .nav-links.active {
+    right: 0 !important; /* إجبار القائمة على الانزلاق للداخل */
+  }
+
+  /* تكبير مسافات الروابط في الهاتف لسهولة اللمس */
+  .nav-links li {
+    margin: 15px 0;
+  }
+  
+  .nav-item {
+    font-size: 1.2rem;
+  }
+.hamburger.toggle .line1 {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: #4facfe; /* لون أزرق عند الفتح */
+  }
+  
+  .hamburger.toggle .line2 {
+    opacity: 0; /* إخفاء الخط الأوسط */
+  }
+  
+  .hamburger.toggle .line3 {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: #4facfe;
+  }
+  /* تأكد فقط من وجود هذا الجزء لحركة الـ X */
+  .hamburger .bar.active:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #4facfe; /* لون أزرق عند الفتح ليتناسق مع اسمك */
+  }
+  
+  .hamburger .bar.active:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger .bar.active:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #4facfe;
+  }
+}
+/* التجاوب مع الهواتف */
+@media (max-width: 768px) {
+  .nav-links { display: none; } /* يمكننا إضافة قائمة برجر لاحقاً للهاتف */
 }

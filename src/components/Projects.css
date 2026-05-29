@@ -24,17 +24,16 @@
 
 /* تصميم بطاقة المشروع (Card) */
 .project-card {
-  background: rgba(30, 41, 59, 0.6); /* خلفية شبه شفافة */
-  backdrop-filter: blur(10px);
+  background: var(--bg-surface);  backdrop-filter: blur(10px);
   padding: 25px;
   border-radius: 16px; /* حواف أكثر دائرية */
-  border: 1px solid rgba(255, 255, 255, 0.05); /* إطار زجاجي */
+  border: 1px solid var(--border-glass); /* إطار زجاجي */
   transition: all 0.4s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(79, 172, 254, 0.5); /* يضيء الإطار باللون الأزرق */
+  border-color: var(--accent-blue); /* يضيء الإطار باللون الأزرق */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -90,4 +89,10 @@
   background-color: #e94560;
   color: white;
   border-color: #e94560;
+}
+
+@media (max-width: 400px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* عرض بطاقة واحدة في كل سطر */
+  }
 }

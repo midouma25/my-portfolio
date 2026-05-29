@@ -74,3 +74,17 @@ input:focus, textarea:focus {
   max-width: 500px;
   margin: 0 auto;
 }
+
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column; /* حقل الاسم فوق حقل الإيميل */
+    gap: 20px;
+  }
+  .contact-section {
+    padding: 60px 5%;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}

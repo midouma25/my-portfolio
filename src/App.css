@@ -1,7 +1,34 @@
-/* استيراد خط Poppins الاحترافي من جوجل */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
-
+  /* استيراد خط Poppins الاحترافي من جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
 /* تنسيق كامل الموقع */
+
+/* 2. تعريف لوحة الألوان الموحدة (CSS Variables) - تقنية المحترفين */
+:root {
+  /* --- تدمير الخلفية الكحلية الداكنة --- */
+  /* استبدالها بأسود فحم عميق جداً (الـ Charcoal) */
+  --bg-main: #0a0c10; 
+  /* لون البطاقات (زجاجي شفاف) */
+  --bg-surface: rgba(17, 24, 39, 0.4); 
+  
+  /* --- ألوان النصوص --- */
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  
+  /* --- القضاء التام على اللون الأحمر الوردي --- */
+  /* استبداله بذهبي ملكي دافئ وفخم (الـ Amber/Gold) */
+  --accent: #fbbf24; 
+  /* تدرج الذكاء الاصطناعي الجديد: أزرق عميق إلى ذهبي */
+  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #fbbf24 100%);
+  
+  /* حدود زجاجية خفيفة */
+  --border-glass: rgba(255, 255, 255, 0.05);
+}
+* { box-sizing: border-box; cursor: none !important; } /* تفعيل الماوس المخصص */
+/* 3. تطبيق القواعد العامة */
+* {
+  box-sizing: border-box;
+  /* cursor: none !important; (أبقِ هذا السطر إذا كنت تستخدم مؤشر الماوس المخصص) */
+}
 body {
 
   
@@ -9,17 +36,25 @@ body {
 * {
   cursor: none !important; /* إخفاء مؤشر الماوس الافتراضي في كل الموقع */
 }
-  margin: 0;
-  font-family: 'Poppins', sans-serif; /* تطبيق الخط الجديد */
-  background-color: #0f172a; /* لون داكن وأنيق جداً */
+margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
   
-  /* إضافة تأثير "الشبكة" (Grid) لتبدو كبيئة تطوير AI */
+  /* --- إضافة العنصر البصري للخلفية: شبكة تقنية دقيقة جداً وبالكاد مرئية --- */
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 30px 30px; /* حجم مربعات الشبكة */
-  
-  color: #f8fafc;
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* استخدام خط البرمجة للعناصر التقنية (مثل الأرقام والتقنيات) */
+.tech-font, .stat-number, .project-tech, .lang-level {
+  font-family: 'JetBrains Mono', monospace;
+
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 .app-container {
@@ -47,4 +82,11 @@ body {
 /* تطبيق الحركة على جميع الأقسام */
 section {
   animation: fadeInUp 1s ease-out forwards;
+}
+
+/* استرجاع المؤشر العادي وإلغاء تأثيرات الماوس في شاشات اللمس */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
 }

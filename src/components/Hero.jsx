@@ -46,7 +46,7 @@ function Hero() {
         
         <div className="hero-buttons">
           <a href="#projects" className="primary-btn">View Projects</a>
-          <a href="/Mohamed_Cherif_CV.pdf" download className="cv-btn">📄 Download CV</a>
+          <a href="/Mohamed_Cherif_Gherbi_CV_Improved.docx" download className="cv-btn">📄 Download CV</a>
         </div>
       </div>
 

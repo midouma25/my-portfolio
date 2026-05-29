@@ -14,13 +14,20 @@ function Footer() {
         {/* روابط التواصل */}
         <div className="social-links">
           {/* استبدل الايميل بايميلك الحقيقي */}
-          <a href="midouma25@gmail.com" className="social-link">📧 Email Me</a>
+          <a 
+            href="mailto:midouma25@gmail.com?subject=Inquiry from Portfolio&body=Hello Mohamed, I saw your portfolio and..." 
+            className="social-link"
+          >
+            📧 Email Me
+          </a>
           
           {/* رابط الغيتهوب الخاص بك */}
           <a href="https://github.com/midouma25" target="_blank" rel="noreferrer" className="social-link">💻 GitHub</a>
           
           {/* يمكنك إضافة رابط لينكد إن هنا */}
           <a href="https://www.linkedin.com/in/mohamed-cherif-gherbi-8930513bb/" target="_blank" rel="noreferrer" className="social-link">🌐 LinkedIn</a>
+
+          <a href="https://www.youtube.com/@gherbimoha25" target="_blank" rel="noreferrer" className="social-link">📺 YouTube</a>
         </div>
       </div>
 

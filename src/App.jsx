@@ -11,7 +11,8 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal'; // <-- الاستدعاء
-
+import Languages from './components/Languages';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <div className="app-container">
@@ -19,8 +20,10 @@ function App() {
       <Navbar />
       
       {/* قسم الـ Hero لا نغلفه لأنه يجب أن يكون ظاهراً فور فتح الموقع */}
+      <ScrollReveal>
       <Hero />
       <Stats />
+      </ScrollReveal>
       <TechMarquee />
       
       {/* نغلف بقية الأقسام بصندوق الـ ScrollReveal */}
@@ -28,10 +31,13 @@ function App() {
         <Projects />
       </ScrollReveal>
 
-      <ScrollReveal>
+      <ScrollReveal >
         <VoiceAndMedia />
       </ScrollReveal>
 
+      <ScrollReveal>
+        <Languages />
+      </ScrollReveal>    
       <ScrollReveal>
         <Education />
       </ScrollReveal>
@@ -41,6 +47,7 @@ function App() {
       </ScrollReveal>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

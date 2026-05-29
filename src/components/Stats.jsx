@@ -14,7 +14,7 @@ function Stats() {
       {statsData.map((stat) => (
         <div key={stat.id} className="stat-item">
           <h3 className="stat-number">{stat.number}</h3>
-          <p className="stat-text">{stat.text}</p>
+          <p className="stat-text"><b>{stat.text}</b></p>
         </div>
       ))}
     </div>

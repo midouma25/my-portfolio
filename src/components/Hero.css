@@ -37,7 +37,7 @@
 }
 
 .highlight-text {
-  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background: var(--accent-gradient); /* التدرج الأزرق-الذهبي */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -64,24 +64,24 @@
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: #0f172a;
+  background: var(--accent-gradient);
+  color: #0a0c10; /* نص داكن فوق الذهبي */
   padding: 12px 30px;
   border-radius: 8px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+  border: none;
 }
 
 .primary-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4); /* ظل ذهبي خفيف */
 }
 
 .cv-btn {
   background-color: transparent;
-  color: #f8fafc;
+  color: var(--text-primary);
   padding: 12px 30px;
   border-radius: 8px;
   border: 2px solid #334155;
@@ -130,9 +130,7 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  z-index: 1;
-  animation: pulse 2s infinite;
+  background: var(--accent-gradient); /* تحديث لون نبض الصورة للذهبي */  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -145,7 +143,8 @@
 .css-audio-waves {
   display: flex;
   gap: 5px;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   height: 40px;
   align-items: flex-end;
 }
@@ -179,4 +178,35 @@
   .hero-text { text-align: center; }
   .hero-buttons { justify-content: center; }
   .hero-title { font-size: 3rem; }
+}
+
+/* تجاوب خاص بالشاشات الصغيرة جداً (الهواتف) */
+@media (max-width: 600px) {
+  .hero-container {
+    padding: 80px 5% 40px 5%;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+  .pulse-ring {
+    width: 240px;
+    height: 240px;
+  }
+  .hero-buttons {
+    flex-direction: column; /* جعل الأزرار فوق بعضها */
+    width: 100%;
+    gap: 15px;
+  }
+  .primary-btn, .cv-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
