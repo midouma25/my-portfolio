@@ -1,0 +1,56 @@
+.media-container {
+  padding: 80px 20px;
+  background-color: #111827; /* لون مختلف قليلاً لكسر الروتين البصري */
+  color: white;
+  text-align: center;
+}
+
+.media-intro {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  color: #a2a2bd;
+  line-height: 1.6;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.media-card {
+  background-color: #1f2937;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid #374151;
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover {
+  transform: scale(1.05); /* تكبير البطاقة بالكامل عند مرور الماوس */
+  border-color: #e94560;
+}
+
+.media-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.media-title {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.media-desc {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.media-action {
+  margin-top: 50px;
+}

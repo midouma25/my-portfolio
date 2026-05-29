@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between; /* توزيع المسافة بين اللوجو والروابط */
   align-items: center;
-  padding: 20px 50px;
+  padding: 30px 40px;
   background-color: #16213e; /* لون داكن يتناسق مع الـ Hero */
   position: sticky; /* هذه الخاصية تجعل الشريط يلتصق بالأعلى */
   top: 0;
@@ -27,7 +27,7 @@
 .navbar-links {
   list-style: none; /* إزالة النقاط السوداء من القائمة */
   display: flex;
-  gap: 30px; /* المسافة بين كل رابط وآخر */
+  gap: 40px; /* المسافة بين كل رابط وآخر */
   margin: 0;
   padding: 0;
 }

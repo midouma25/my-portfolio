@@ -16,7 +16,7 @@
   font-size: 3.5rem; /* خط كبير جداً وبارز */
   margin-bottom: 10px;
   color: #0f3460; /* لون أزرق عصري للاسم */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* إضافة ظل خفيف للنص */
+  text-shadow: 2 px 2px 8px rgba(0,0,0,0.5); /* إضافة ظل خفيف للنص */
 }
 
 /* تنسيق المسمى الوظيفي */
@@ -44,7 +44,7 @@
 
 /* التنسيق المشترك للأزرار */
 button {
-  padding: 12px 30px;
+  padding: 15px 30px;
   font-size: 1.1rem;
   border: none;
   border-radius: 5px; /* حواف دائرية */
@@ -68,11 +68,11 @@ button {
 .secondary-btn {
   background-color: transparent;
   color: #e94560;
-  border: 2px solid #e94560;
+  border: 3px solid #e94560;
 }
 
 .secondary-btn:hover {
   background-color: #e94560;
   color: white;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
