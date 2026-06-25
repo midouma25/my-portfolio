@@ -40,20 +40,26 @@ function Education() {
       issuer: "IBM",
       date: "May 2026"
     },
-    {
+        {
       id: 4,
+      name: "Developing Back-End Apps with Node.js and Express",
+      issuer: "IBM",
+      date: "June 2026"
+    },
+    {
+      id: 5,
       name: "Cloud Computing & Full Stack Dev",
       issuer: "IBM",
       date: "Apr 2026"
     },
     {
-      id: 5,
+      id: 6,
       name: "Crash Course on Python",
       issuer: "Google",
       date: "Nov 2025"
     },
     {
-      id: 6,
+      id: 7,
       name: "Algorithmic Forex Trading System",
       issuer: "Udemy",
       date: "Jul 2025"
