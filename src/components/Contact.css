@@ -1,0 +1,90 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #111827;
+  text-align: center;
+  color: white;
+}
+
+.contact-subtitle {
+  color: #9ca3af;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+input, textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background-color: #1f2937;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent); /* حدود ذهبية عند الكتابة */
+}
+
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+background: var(--accent-gradient);
+  color: #0a0c10;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.4);
+  transform: translateY(-2px);
+}
+.success-message {
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  color: #10b981;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column; /* حقل الاسم فوق حقل الإيميل */
+    gap: 20px;
+  }
+  .contact-section {
+    padding: 60px 5%;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,53 @@
+.footer-container {
+  background-color: #0f172a; /* لون داكن جداً ليكون نهاية أنيقة للموقع */
+  color: white;
+  padding: 60px 20px 20px 20px;
+  text-align: center;
+  border-top: 2px solid #1e293b;
+}
+
+.footer-title {
+  font-size: 2rem;
+  color: #e9d345;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  background-color: #1e293b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 1px solid #334155;
+}
+
+.social-link:hover {
+  background-color: #e94560;
+  border-color: #e94560;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 20px;
+  color: #64748b;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,129 @@
+/* --- الحاوية الرئيسية --- */
+.education-container {
+  padding: 80px 5%;
+  /* جعلنا الخلفية شفافة لكي تظهر الشبكة التقنية الموجودة في App.css */
+  background-color: rgba(26, 26, 46, 0.8); /* لون داكن شفاف */
+}
+
+.education-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* تقسيم الشاشة نصفين في الشاشات الكبيرة */
+.academic-section, .cert-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sub-title {
+  color: var(--accent); /* اللون الذهبي */
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- تصميم الخط الزمني (الجامعة) --- */
+.timeline {
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -28.5px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.5); /* إشعاع ذهبي */
+}
+
+.degree-title {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.institution {
+  color: var(--text-secondary); /* التناسق مع النصوص الفرعية */
+  margin-bottom: 10px;
+}
+
+.date-badge {
+  /* وداعاً للون الأحمر! خلفية ذهبية شفافة ونص ذهبي */
+  background-color: rgba(251, 191, 36, 0.1); 
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --- تصميم بطاقات الشهادات --- */
+.cert-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cert-card {
+  background-color: var(--bg-surface); /* استخدام خلفية البطاقات الزجاجية الموحدة */
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  border-top: 1px solid var(--border-glass);
+  border-right: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateX(10px);
+  box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+  border-left-color: var(--text-primary); /* وميض أبيض للخط الأيسر عند المرور */
+}
+
+.cert-name {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.cert-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.cert-issuer {
+  font-weight: bold;
+  color: var(--accent); /* اسم المُصدر (مثل IBM) باللون الذهبي */
+}
+
+/* --- التجاوب مع الهواتف --- */
+@media (max-width: 768px) {
+  .education-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .academic-section, .cert-section {
+    width: 100%;
+  }
+  .sub-title {
+    font-size: 1.5rem;
+  }
+}

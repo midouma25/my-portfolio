@@ -1,0 +1,98 @@
+/* الحاوية الرئيسية للقسم */
+.projects-container {
+  padding: 80px 20px;
+  background-color: #1a1a2e; /* نفس لون الـ Hero ليكون متناسقاً */
+  color: white;
+  text-align: center;
+}
+
+/* عنوان القسم */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #e94560;
+}
+
+/* شبكة عرض البطاقات (Grid) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تجعل التصميم متجاوباً مع الهاتف والكمبيوتر */
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto; /* لتوسيط الشبكة في منتصف الشاشة */
+}
+
+/* تصميم بطاقة المشروع (Card) */
+.project-card {
+  background: var(--bg-surface);  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 16px; /* حواف أكثر دائرية */
+  border: 1px solid var(--border-glass); /* إطار زجاجي */
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-blue); /* يضيء الإطار باللون الأزرق */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* نصوص البطاقة */
+.project-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.project-desc {
+  color: #a2a2bd;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* صندوق التقنيات المستخدمة */
+.project-tech-box {
+  margin-top: auto;
+}
+
+.project-tech {
+  color: var(--accent); /* النص ذهبي */
+  background: rgba(251, 191, 36, 0.1); /* خلفية ذهبية شفافة جداً */
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* أزرار فلترة المشاريع */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background-color: transparent;
+  color: #a2a2bd;
+  border: 2px solid #374151;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover, 
+.filter-buttons button.active-filter {
+  background: var(--accent-gradient);
+  color: #0a0c10;
+  border-color: transparent;
+}
+
+@media (max-width: 400px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* عرض بطاقة واحدة في كل سطر */
+  }
+}

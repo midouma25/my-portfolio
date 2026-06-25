@@ -1,0 +1,13 @@
+/* الحالة الابتدائية: العنصر مخفي ومزاح للأسفل قليلاً */
+.reveal-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform; /* تسريع الأداء */
+}
+
+/* الحالة المرئية: العنصر يظهر ويعود لمكانه الأصلي */
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

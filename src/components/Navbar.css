@@ -1,0 +1,155 @@
+/* ========================================= */
+/* 🖥️ إعدادات شريط التنقل الأساسية */
+/* ========================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(10, 12, 16, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+  
+  /* هذا هو السطر الذي يجعله ينزل معك (Sticky) */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo a {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.highlight-dot {
+  color: var(--accent); /* نقطة ذهبية */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: var(--accent);
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-contact-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-contact-btn:hover {
+  background: var(--accent);
+  color: #0a0c10;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+}
+
+/* ========================================= */
+/* 🍔 إعدادات زر الهامبرغر الصارمة */
+/* ========================================= */
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-primary);
+  position: absolute;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+
+.hamburger .line1 { top: 0; }
+.hamburger .line2 { top: 50%; transform: translateY(-50%); }
+.hamburger .line3 { bottom: 0; }
+
+.mobile-only { display: none; }
+
+/* ========================================= */
+/* 📱 التجاوب مع شاشات الهواتف والتابلت */
+/* ========================================= */
+@media (max-width: 850px) {
+  .hamburger { display: block; }
+  .desktop-only { display: none; }
+  .mobile-only { display: block; margin-top: 30px; }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(10, 12, 16, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .nav-links.active { right: 0 !important; }
+  .nav-links li { margin: 15px 0; }
+  .nav-item { font-size: 1.2rem; }
+
+  /* تحويل الأشرطة إلى حرف X (باللون الذهبي) */
+  .hamburger.toggle .line1 {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--accent);
+  }
+  .hamburger.toggle .line2 { opacity: 0; }
+  .hamburger.toggle .line3 {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: var(--accent);
+  }
+}
